@@ -5,7 +5,7 @@ import axios from 'axios';
 
 export default function Home() {
 
-  const [arraySize, setArraySize] = useState()
+  const [arraySize, setArraySize] = useState(0)
 
   useEffect(() => {
     getArray()
@@ -34,12 +34,10 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      {/* <form action="" onSubmit={getArraySize}> */}
         <title>Random Array Generator</title>
         <h1>Insira um tamanho para seu array</h1>
         <input name="arraysize" id="arraysize" type="number" placeholder="Ex: 1 " className={styles.input}/>
         <button onClick={getArraySize} className={styles.button} >Gerar Array</button>
-      {/* </form> */}
     </div>
   )
 }
